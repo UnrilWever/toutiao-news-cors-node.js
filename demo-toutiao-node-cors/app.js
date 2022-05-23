@@ -21,6 +21,6 @@ app.use(deleteRequest)
 app.use(patchRequest)
 app.use(putRequest)
 
-app.listen(80, () => {
-  console.log('服务器启动')
-})
+const port = process.env.PORT || 3000
+
+app.listen(port, () => console.log(`Server running on ${port}, http://localhost:${port}`))
